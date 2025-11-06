@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+  body {
+  width: 300px;
+  padding: 16px;
+  font-family: Inter, Arial, sans-serif;
+  background: #f7f8fa;
+  color: #1f2937;
+}
+
+h3 {
+  margin: 0 0 14px;
+  font-weight: 600;
+  font-size: 17px;
+  color: #111827;
+}
+
+input,
+button {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 6px 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+/* Input vibe */
+input {
+  border: 1px solid #d1d5db;
+  background: white;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+  outline: none;
+}
+
+/* Buttons */
+button {
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  transition: 0.2s;
+}
+
+button:hover {
+  filter: brightness(1.08);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Layout row */
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.row > * {
+  flex: 1;
+}
+
+/* Status */
+#status {
+  margin-top: 6px;
+  min-height: 16px;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+/* Small tip text */
+small {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+/* Card-like container */
+body {
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+    </style>
+  </head>
+  <body>
+    <h3 style="margin: 0 0 8px">GitHub Commit Downloader</h3>
+    <input id="repo" placeholder="user/repo" />
+    <div class="row">
+      <input id="hash" placeholder="commit hash (vd: 7e12fab)" />
+      <button id="btnFirst" title="Đi tới commit đầu tiên">First</button>
+    </div>
+    <button id="downloadBtn">Download ZIP</button>
+    <div id="status" class="muted"></div>
+    <small
+      >Tip: để trống hash rồi bấm <b>First</b> để mở commit đầu tiên.</small
+    >
+    <script src="popup.js"></script>
+  </body>
+</html>

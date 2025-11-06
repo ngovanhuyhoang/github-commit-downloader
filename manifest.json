@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Commit Downloader (Auto Repo)",
+  "version": "1.1.0",
+  "description": "Tự bắt repo trên GitHub và tải ZIP theo commit hash.",
+  "permissions": ["tabs", "activeTab", "scripting"],
+  "host_permissions": ["https://github.com/*", "https://codeload.github.com/*"],
+  "action": {
+    "default_title": "GitHub Commit Downloader",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
