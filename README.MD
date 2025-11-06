@@ -4,3 +4,4 @@
 > Auto detect commit   
 > First commit jump 
 > Đây là chrome extension
+
